@@ -88,6 +88,17 @@
                 this.totalModels = document.querySelectorAll('a-entity[gltf-model]').length;
                 this.totalSounds = document.querySelectorAll('a-sound').length;
                 this.totalAssets = this.totalModels + this.totalSounds;
+                this.screenHidden = false;
+        
+                console.log(`Total assets to load: ${this.totalAssets} (${this.totalModels} models + ${this.totalSounds} sounds)`);
+        
+                // Fallback timeout - hide loading screen after 6 seconds regardless
+                setTimeout(() => {
+                    if (!this.screenHidden) {
+                        console.warn('Asset loading timeout - forcing loading screen to hide');
+                        this.hideLoadingScreen();
+                    }
+                }, 6000);
         
                 // Track model loading
                 const modelEntities = document.querySelectorAll('a-entity[gltf-model]');
@@ -121,7 +132,7 @@
                 }
                 console.log(`Loaded ${type}: ${this.loadedAssets}/${this.totalAssets} (${progress}%)`);
         
-                if (this.loadedAssets >= this.totalAssets) {
+                if (this.loadedAssets >= this.totalAssets && !this.screenHidden) {
                     this.hideLoadingScreen();
                 }
             },
@@ -131,7 +142,7 @@
                 this.totalAssets--;
                 
                 // Check if we should hide loading screen even with some failed assets
-                if (this.loadedAssets >= this.totalAssets) {
+                if (this.loadedAssets >= this.totalAssets && !this.screenHidden) {
                     this.hideLoadingScreen();
                 }
             },
@@ -140,6 +151,7 @@
                 if (this.loadingScreen && this.loadingScreen.style.display !== 'none') {
                     console.log('All resources loaded, hiding loading screen');
                     this.loadingScreen.style.display = 'none';
+                    this.screenHidden = true;
                 }
             }
         });
@@ -420,7 +432,7 @@
         <a-marker id="butterfly-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
             url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-butterfly.patt">
-            <a-entity asset-error position="0 0 0" scale="0.03 0.03 0.03" rotation="-90 0 0" animation-mixer
+            <a-entity asset-error position="0 0 0" scale="0.025 0.025 0.025" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/butterfly.glb">
             </a-entity>
