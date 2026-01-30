@@ -152,6 +152,12 @@
                     console.log('All resources loaded, hiding loading screen');
                     this.loadingScreen.style.display = 'none';
                     this.screenHidden = true;
+                    
+                    // Show logo after loading screen is hidden
+                    const logo = document.querySelector('#logo');
+                    if (logo) {
+                        logo.style.display = 'block';
+                    }
                 }
             }
         });
@@ -400,6 +406,7 @@
             z-index: 1000;
             max-width: 120px;
             max-height: 80px;
+            display: none;
             /* background-color: rgba(255, 255, 255, 0.95); */
             /* padding: 8px; */
             /* border-radius: 8px; */
@@ -462,7 +469,7 @@
         </a-marker>
 
         <!-- penguin -->
-        <a-marker id="penguin-marker" marker-sound persistent-marker type="pattern"
+        <!-- <a-marker id="penguin-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
             url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-penguin.patt">
             <a-entity asset-error position="0 0 0" scale="0.02 0.02 0.02" rotation="-90 0 0" animation-mixer
@@ -472,7 +479,7 @@
             <a-sound asset-error
                 src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/penguin.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
-        </a-marker>
+        </a-marker> -->
 
         <!-- quack -->
         <a-marker id="quack-marker" marker-sound persistent-marker type="pattern"
