@@ -401,9 +401,9 @@
             max-width: 120px;
             max-height: 80px;
             /* background-color: rgba(255, 255, 255, 0.95); */
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            /* padding: 8px; */
+            /* border-radius: 8px; */
+            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
         }
 
         #logo img {
@@ -461,16 +461,16 @@
 
         </a-marker>
 
-        <!-- rose -->
-        <a-marker id="rose-marker" marker-sound persistent-marker type="pattern"
+        <!-- penguin -->
+        <a-marker id="penguin-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-rose.patt">
-            <a-entity asset-error position="0 0 0" scale="0.8 0.8 0.8" rotation="-90 0 0" animation-mixer
+            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-penguin.patt">
+            <a-entity asset-error position="0 0 0" scale="0.02 0.02 0.02" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
-                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/rose.glb">
+                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/penguin.glb">
             </a-entity>
             <a-sound asset-error
-                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/rose.mp3"
+                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/penguin.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
         </a-marker>
 
@@ -486,6 +486,21 @@
                 src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/quack.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
         </a-marker>
+
+
+        <!-- rose -->
+        <a-marker id="rose-marker" marker-sound persistent-marker type="pattern"
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
+            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-rose.patt">
+            <a-entity asset-error position="0 0 0" scale="0.8 0.8 0.8" rotation="-90 0 0" animation-mixer
+                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
+                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/rose.glb">
+            </a-entity>
+            <a-sound asset-error
+                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/rose.mp3"
+                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+        </a-marker>
+
 
         <!-- snowman -->
         <a-marker id="snowman-marker" marker-sound persistent-marker type="pattern"
