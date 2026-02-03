@@ -8,77 +8,6 @@
     <script src="https://unpkg.com/aframe-html-shader@1.5.0/dist/aframe-html-shader.min.js"></script>
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
-
-
-
-    <!-- <script>
-        AFRAME.registerSystem('loading-screen', {
-            init: function () {
-                this.loadingScreen = document.querySelector('#loading-screen');
-                this.progressText = document.querySelector('#loading-progress');
-                this.loadedAssets = 0;
-                this.totalModels = document.querySelectorAll('a-entity[gltf-model]').length;
-                this.totalSounds = document.querySelectorAll('a-sound').length;
-                this.totalAssets = this.totalModels + this.totalSounds;
-
-                // Track model loading
-                const modelEntities = document.querySelectorAll('a-entity[gltf-model]');
-                modelEntities.forEach(entity => {
-                    entity.addEventListener('model-loaded', () => this.assetLoaded('model'));
-                });
-
-                // Track audio loading
-                const soundEntities = document.querySelectorAll('a-sound');
-                soundEntities.forEach(sound => {
-                    sound.addEventListener('sound-loaded', () => this.assetLoaded('sound'));
-                });
-
-                // Fallback timeout
-                setTimeout(() => {
-                    this.hideLoadingScreen();
-                }, 5000);
-            },
-
-            assetLoaded: function (type) {
-                this.loadedAssets++;
-                const progress = Math.round((this.loadedAssets / this.totalAssets) * 100);
-
-                if (this.progressText) {
-                    this.progressText.textContent = `${progress}%`;
-                }
-                console.log(`Loaded ${type}: ${this.loadedAssets}/${this.totalAssets} (${progress}%)`);
-
-                if (this.loadedAssets >= this.totalAssets) {
-                    this.hideLoadingScreen();
-                }
-            },
-
-            hideLoadingScreen: function () {
-                if (this.loadingScreen && this.loadingScreen.style.display !== 'none') {
-                    console.log('All resources loaded, hiding loading screen');
-                    this.loadingScreen.style.display = 'none';
-                }
-            }
-        });
-
-        // Add error handling for model and sound loading
-        AFRAME.registerComponent('asset-error', {
-            init: function () {
-                this.el.addEventListener('model-error', (e) => {
-                    console.error('Model loading failed:', e.detail.src);
-                });
-
-                if (this.el.components.sound) {
-                    this.el.addEventListener('sound-error', (e) => {
-                        console.error('Sound loading failed:', e.detail.src);
-                    });
-                }
-            }
-        });
-    </script> -->
-
-
-
     <script>
         AFRAME.registerSystem('loading-screen', {
             init: function () {
@@ -407,10 +336,6 @@
             max-width: 120px;
             max-height: 80px;
             display: none;
-            /* background-color: rgba(255, 255, 255, 0.95); */
-            /* padding: 8px; */
-            /* border-radius: 8px; */
-            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
         }
 
         #logo img {
@@ -433,7 +358,6 @@
         <div class="loading-text">Loading AR Resources... <span id="loading-progress">0%</span></div>
     </div>
 
-
     <a-scene embedded loading-screen
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; patternRatio:0.80" gesture-detector
         renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;">
@@ -451,6 +375,19 @@
             </a-entity>
             <a-sound asset-error
                 src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/A.mp3"
+                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+        </a-marker>
+
+        <!-- Butterfly -->
+        <a-marker id="butterfly-marker" marker-sound persistent-marker type="pattern"
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
+            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-butterfly.patt">
+            <a-entity asset-error position="0 0 0" scale="0.025 0.025 0.025" rotation="-90 0 0" animation-mixer
+                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
+                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/butterfly.glb">
+            </a-entity>
+            <a-sound asset-error
+                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/Butterfly.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
         </a-marker>
 
@@ -481,19 +418,6 @@
                 src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/Horse.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
         </a-marker>
-
-        <!-- penguin -->
-        <!-- <a-marker id="penguin-marker" marker-sound persistent-marker type="pattern"
-            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-penguin.patt">
-            <a-entity asset-error position="0 0 0" scale="0.02 0.02 0.02" rotation="-90 0 0" animation-mixer
-                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
-                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/penguin.glb">
-            </a-entity>
-            <a-sound asset-error
-                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/penguin.mp3"
-                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
-        </a-marker> -->
 
         <!-- quack -->
         <a-marker id="quack-marker" marker-sound persistent-marker type="pattern"
