@@ -392,6 +392,19 @@
 
         </a-marker>
 
+         <!-- elephant -->
+        <a-marker id="elephant-marker" marker-sound persistent-marker type="pattern"
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
+            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-elephant2.patt">
+            <a-entity asset-error position="0 0 0" scale="0.5 0.5 0.5" rotation="-90 20 0" animation-mixer
+                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
+                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/elephant.glb">
+            </a-entity>
+            <a-sound asset-error
+                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/elephant.mp3"
+                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+        </a-marker>
+
 
         <!-- Horse -->
         <a-marker id="horse-marker" marker-sound persistent-marker type="pattern"
