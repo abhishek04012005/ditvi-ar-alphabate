@@ -163,7 +163,6 @@
                         this.positions.forEach(pos => smoothedPosition.add(pos));
                         smoothedPosition.divideScalar(this.positions.length);
 
-                        // Average rotations
                         this.rotations.forEach(rot => {
                             smoothedRotation.x += rot.x;
                             smoothedRotation.y += rot.y;
