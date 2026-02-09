@@ -365,31 +365,30 @@
         <a-light type="directional" position="1 1 1" intensity="4" color="#FFF">
         </a-light>
 
-
-        <!-- watch -->
-        <a-marker id="watch-marker" marker-sound persistent-marker type="pattern"
+        <!-- Apple  -->
+        <a-marker id="apple-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-untitled.patt">
-            <a-entity asset-error position="0 0 0" scale="0.6 0.6 0.6" rotation="-90 0 0" animation-mixer
-                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
-                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/watch.glb">
-            </a-entity>
-            <a-sound asset-error
-                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/zebra.mp3"
-                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
-        </a-marker>
-
-        <!-- <a-marker id="apple-marker" marker-sound persistent-marker type="pattern"
-            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-apple.patt">
+            url="./assets/marker/pattern-apple.patt">
             <a-entity asset-error position="0 0 0" scale="0.03 0.03 0.03" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
-                gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/apple2.0.glb">
+                gltf-model="./assets/model/apple2.0.glb">
+            </a-entity>
+            <a-sound asset-error src="./assets/sound/A.mp3" autoplay="false" loop="false" position="0 0 0"
+                volume="7.0"></a-sound>
+        </a-marker>
+
+        <!-- Butterfly -->
+        <a-marker id="butterfly" marker-sound persistent-marker type="pattern"
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
+            url="./assets/marker/pattern-butterfly.patt">
+            <a-entity asset-error position="0 0 0" scale="0.025 0.025 0.025" rotation="-90 0 0" animation-mixer
+                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
+                gltf-model="./assets/model/butterfly.glb">
             </a-entity>
             <a-sound asset-error
-                src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/A.mp3"
+                src="./assets/sound/Butterfly.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
-        </a-marker> -->
+        </a-marker>
 
         <!-- Dog -->
         <a-marker id="dog-marker" marker-sound persistent-marker type="pattern"
@@ -405,7 +404,7 @@
 
         </a-marker>
 
-         <!-- elephant -->
+        <!-- elephant -->
         <a-marker id="elephant-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
             url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-elephant2.patt">
@@ -432,7 +431,7 @@
                 autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
         </a-marker>
 
-         <!-- ice-cream -->
+        <!-- ice-cream -->
         <a-marker id="ice-cream-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
             url="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/marker/pattern-ice-cream.patt">
@@ -466,7 +465,7 @@
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/model/lion.glb">
             </a-entity>
-          <a-sound asset-error
+            <a-sound asset-error
                 src="https://raw.githubusercontent.com/abhishek04012005/ditvi-ar-alphabate/refs/heads/main/assets/sound/lion.mp3"
                 autoplay="false" loop="false" position="0 0 0" volume="5.0"></a-sound>
         </a-marker>
