@@ -365,17 +365,18 @@
         <a-light type="directional" position="1 1 1" intensity="4" color="#FFF">
         </a-light>
 
-        <!-- Apple  -->
-        <a-marker id="apple-marker" marker-sound persistent-marker type="pattern"
+        <!-- orange -->
+        <a-marker id="orange-marker" marker-sound persistent-marker type="pattern"
             smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="./assets/marker/pattern-apple.patt">
-            <a-entity asset-error position="0 0 0" scale="0.03 0.03 0.03" rotation="-90 0 0" animation-mixer
+            url="./assets/marker/pattern-orange.patt">
+            <a-entity asset-error position="0 0 0" scale="0.3 0.3 0.3" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
-                gltf-model="./assets/model/apple.glb">
+                gltf-model="./assets/model/orange.glb">
             </a-entity>
-            <a-sound asset-error src="./assets/sound/apple.mp3" autoplay="false" loop="false" position="0 0 0"
+            <a-sound asset-error src="./assets/sound/orange.mp3" autoplay="false" loop="false" position="0 0 0"
                 volume="7.0"></a-sound>
         </a-marker>
+
 
         <!-- Butterfly -->
         <a-marker id="butterfly" marker-sound persistent-marker type="pattern"
@@ -388,6 +389,7 @@
             <a-sound asset-error src="./assets/sound/butterfly.mp3" autoplay="false" loop="false" position="0 0 0"
                 volume="7.0"></a-sound>
         </a-marker>
+
 
         <!-- Cat -->
         <a-marker id="cat-marker" marker-sound persistent-marker type="pattern"
@@ -487,8 +489,7 @@
 
         <!-- Kettle -->
         <a-marker id="key-marker" marker-sound persistent-marker type="pattern"
-            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="./assets/marker/pattern-key.patt">
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2" url="./assets/marker/pattern-key.patt">
             <a-entity asset-error position="0 0 0" scale="0.2 0.2 0.2" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="./assets/model/key.glb">
@@ -642,15 +643,13 @@
 
         <!-- xmas -->
         <a-marker id="xmas-marker" marker-sound persistent-marker type="pattern"
-            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
-            url="./assets/marker/pattern-xmas.patt">
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2" url="./assets/marker/pattern-xmas.patt">
             <a-entity asset-error position="0 0 0" scale="0.2 0.2 0.2" rotation="-90 0 0" animation-mixer
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="./assets/model/xmas.glb">
             </a-entity>
-            <a-sound asset-error
-                src="./assets/sound/xmas.mp3"
-                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+            <a-sound asset-error src="./assets/sound/xmas.mp3" autoplay="false" loop="false" position="0 0 0"
+                volume="7.0"></a-sound>
         </a-marker>
 
 
@@ -662,9 +661,8 @@
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="./assets/model/yatch.glb">
             </a-entity>
-            <a-sound asset-error
-                src="./assets/sound/yatch.mp3"
-                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+            <a-sound asset-error src="./assets/sound/yatch.mp3" autoplay="false" loop="false" position="0 0 0"
+                volume="7.0"></a-sound>
         </a-marker>
 
 
@@ -676,9 +674,20 @@
                 class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
                 gltf-model="./assets/model/zebra.glb">
             </a-entity>
-            <a-sound asset-error
-                src="./assets/sound/zebra.mp3"
-                autoplay="false" loop="false" position="0 0 0" volume="7.0"></a-sound>
+            <a-sound asset-error src="./assets/sound/zebra.mp3" autoplay="false" loop="false" position="0 0 0"
+                volume="7.0"></a-sound>
+        </a-marker>
+
+        <!-- Apple  -->
+        <a-marker id="apple-marker" marker-sound persistent-marker type="pattern"
+            smooth="smoothCount: 10; smoothTolerance: 0.01; smoothThreshold: 2"
+            url="./assets/marker/pattern-apple.patt">
+            <a-entity asset-error position="0 0 0" scale="0.03 0.03 0.03" rotation="-90 0 0" animation-mixer
+                class="clickable" gesture-handler="minScale: 0.05; maxScale: 10; rotationFactor: 5"
+                gltf-model="./assets/model/apple.glb">
+            </a-entity>
+            <a-sound asset-error src="./assets/sound/apple.mp3" autoplay="false" loop="false" position="0 0 0"
+                volume="7.0"></a-sound>
         </a-marker>
 
 
